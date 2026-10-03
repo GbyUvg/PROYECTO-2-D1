@@ -1,0 +1,75 @@
+#include <Arduino.h>
+#include <Wire.h>
+#include <driver/ledc.h>
+#include <stdint.h>
+#include <LiquidCrystal.h>
+
+
+void lecturas(void);
+void pantalla(void);
+void medicion(void);
+
+const int pot1 = 36; 
+
+#define I2C_address 0x55
+
+#define rs 15
+#define en 2
+#define d0 4
+#define d1 5
+#define d2 18
+#define d3 19
+#define d4 13
+#define d5 12
+#define d6 23
+#define d7 32
+LiquidCrystal lcd(rs, en, d0, d1, d2, d3, d4, d5, d6, d7);
+
+int lectura1 = 0;
+int lectura = 0;
+int voltaje = 0;
+int adc = 0;
+
+void setup() {
+  Wire.begin(I2C_address, 21, 22);
+
+  pinMode(pot1, INPUT);
+
+  lcd.begin(16, 2);
+  lcd.setCursor(0, 0);
+
+}
+
+void loop() {
+  lecturas();
+  pantalla();
+}
+void lecturas() {
+  lectura1 = analogRead(pot1);
+  lectura = map(lectura1, 0, 4095, 0, 255);
+  voltaje = lectura1 * (3.3 / 4095.0);
+}
+
+void pantalla() {
+
+  lcd.setCursor(0, 0);
+
+  lcd.print("Pot1:");
+  lcd.print(lectura);
+  lcd.print("   ");
+
+  lcd.setCursor(0, 1);
+
+  lcd.print("Voltaje:");
+  lcd.print(voltaje);
+  lcd.print("   ");
+
+  lcd.setCursor(8, 0);
+
+}
+
+void medicion() {
+  adc = analogRead(pot1);
+  Wire.write(adc >> 8);
+
+}
