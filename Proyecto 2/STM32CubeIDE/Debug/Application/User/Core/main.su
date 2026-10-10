@@ -1,0 +1,14 @@
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:92:5:main	176	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:201:6:SystemClock_Config	88	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:249:13:MX_I2C1_Init	8	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:283:13:MX_SPI1_Init	8	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:321:13:MX_TIM2_Init	64	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:380:13:MX_USART2_UART_Init	8	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:413:13:MX_GPIO_Init	48	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:452:6:HAL_UART_RxCpltCallback	16	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:498:6:menu	128	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:509:6:leerpot	176	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:567:6:enviarSPI	96	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:600:6:procesarSPI	80	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:627:6:configurarTimer	24	static
+C:/Users/victo/OneDrive/Escritorio/Digital II/Proyecto 2/Core/Src/main.c:646:6:Error_Handler	4	static,ignoring_inline_asm
